@@ -2,7 +2,7 @@
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-export EDITOR=sublime
+export EDITOR=nano
 
 
 # http://osxdaily.com/2013/02/05/improve-terminal-appearance-mac-os-x/
