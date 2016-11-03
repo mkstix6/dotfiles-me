@@ -100,6 +100,7 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+brew install ffmpeg --with-libvpx
 
 # Remove outdated versions from the cellar.
 brew cleanup
