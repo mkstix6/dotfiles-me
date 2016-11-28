@@ -4,7 +4,7 @@ prompt pure
 # next line doesn't work at the moment
 # export PROMPT=“%~ 😐”
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ##
 # Your previous /Users/mk/.bash_profile file was backed up as /Users/mk/.bash_profile.macports-saved_2016-10-26_at_15:20:51
