@@ -1,23 +1,11 @@
 autoload -U promptinit; promptinit
 prompt pure
 
-# next line doesn't work at the moment
-# export PROMPT=“%~ 😐”
-
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-##
-# Your previous /Users/mk/.bash_profile file was backed up as /Users/mk/.bash_profile.macports-saved_2016-10-26_at_15:20:51
-##
-
-
-# MacPorts Installer addition on 2016-10-26_at_15:20:51: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+ZSH_THEME="pure"
 
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=/usr/local/php5/bin:$PATH
 
@@ -27,9 +15,7 @@ export ZSH=/Users/mk/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="pure"
-# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -123,3 +109,12 @@ export EDITOR="$VISUAL"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls='ls -GFh'
+
+alias ga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%s"'
+alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gs='git log --all --graph --oneline --decorate'
+alias gb='git branch -a -vv'
+alias gf='git fetch --prune;gb'
+alias gfa='gr git fetch --prune;gr status'

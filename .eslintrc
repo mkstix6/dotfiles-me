@@ -16,6 +16,6 @@
     // Tons of rules you can use, for example...
     "quotes": [1, "single"],
     "semi": [1, "never"],
-    "indent": ["error", 4]
+    "indent": ["error", 2]
   }
 }
