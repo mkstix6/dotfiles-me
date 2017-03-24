@@ -1,6 +1,10 @@
+autoload -U promptinit; promptinit
+prompt pure
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# next line doesn't work at the moment
+# export PROMPT=“%~ 😐”
 
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ##
 # Your previous /Users/mk/.bash_profile file was backed up as /Users/mk/.bash_profile.macports-saved_2016-10-26_at_15:20:51
@@ -32,8 +36,8 @@ export ZSH=/Users/mk/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="pure"
-ZSH_THEME="random"
+ZSH_THEME="pure"
+# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
