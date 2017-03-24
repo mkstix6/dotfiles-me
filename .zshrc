@@ -15,19 +15,11 @@ prompt pure
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-# Alias list
-alias sublime="open -a /Applications/Sublime\ Text.app"
-# alias' for git commands
-alias ga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%s"'
-alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias gs='git log --all --graph --oneline --decorate'
-alias gb='git branch -a -vv'
-alias gf='git fetch --prune;gb'
-alias gfa='gr git fetch --prune;gr status'
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH=/usr/local/php5/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mk/.oh-my-zsh
@@ -81,9 +73,24 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%s"'
+# Alias list
+alias sublime="open -a /Applications/Sublime\ Text.app"
+# alias' for git commands
+alias gr='gr'
+alias ga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gs='git log --all --graph --oneline --decorate'
+alias gb='git branch -a -vv'
+alias gf='git fetch --prune;gb'
+alias grfa='gr git fetch --prune;gr status'
+# alias' for docker-compose commands
+alias dcdud='docker-compose down;docker-compose up -d'
+alias dcdu='docker-compose down;docker-compose up'
 
 # User configuration
 
@@ -93,11 +100,14 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
