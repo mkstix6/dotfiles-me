@@ -1,5 +1,4 @@
 module.exports = {
-
     config: {
         hyperBorder: {
             // borderColors: ['random', 'random'],
@@ -9,7 +8,7 @@ module.exports = {
         fontSize: 12,
 
         // font family with optional fallbacks
-        fontFamily: 'Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+        fontFamily: '"Droid Sans Mono",Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
         cursorColor: 'rgba(248,28,229,0.8)',
@@ -30,9 +29,9 @@ module.exports = {
         css: '',
 
         // custom css to embed in the terminal window
-        termCSS: '',
-        // temporary fir for white text on white background
-        // termCSS: 'span { background-color: transparent !important; }',
+        // termCSS: '',
+        // temporary fix for white text on white background
+        termCSS: 'span { background-color: transparent !important; }',
 
         // custom padding (css format, i.e.: `top right bottom left`)
         padding: '12px 14px',
@@ -99,7 +98,7 @@ module.exports = {
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
     localPlugins: []
-}
+};
 module.exports.onWindow = browserWindow => browserWindow.setVibrancy('light');
 
 module.exports.decorateConfig = config => {
