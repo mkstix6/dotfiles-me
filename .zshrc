@@ -93,8 +93,11 @@ alias grst='gr status'
 alias grast='gr @active status'
 alias grafa='gr @active git fetch --prune;grast'
 # alias' for docker-compose commands
-alias dcdud='docker-compose down;docker-compose up -d'
 alias dcdu='docker-compose down;docker-compose up'
+alias dcdud='docker-compose down;docker-compose up -d'
+alias dcdudg='docker-compose down;docker-compose up -d;npm run dev'
+alias z='sublime ~/.zshrc'
+alias sky='cd ~/Sites/skytrax-ratings/'
 
 # User configuration
 
