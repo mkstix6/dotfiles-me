@@ -78,7 +78,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%s"'
+alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%<(70,mtrunc)%s"'
 # Alias list
 alias sublime="open -a /Applications/Sublime\ Text.app"
 # alias' for git commands
