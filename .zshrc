@@ -92,6 +92,7 @@ alias grfa='gr git fetch --prune;gr status'
 alias grst='gr status'
 alias grast='gr @active status'
 alias grafa='gr @active git fetch --prune;grast'
+alias grabv='gr @active git fetch --prune;gr @active git branch -a -vv'
 alias gfgg='gf;gg'
 # alias' for docker-compose commands
 alias dcdu='docker-compose down;docker-compose up'
