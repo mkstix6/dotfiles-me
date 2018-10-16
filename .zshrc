@@ -21,6 +21,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$HOME/php5/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/npm-global/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mk/.oh-my-zsh
@@ -29,7 +30,10 @@ export ZSH=/Users/mk/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="pure"
+# ZSH_THEME="refined"
+# ZSH_THEME="theunraveler"
+ZSH_THEME="agnoster"
+# ZSH_THEME="spaceship"
 # ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -79,27 +83,28 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 alias gg='git log --graph --all --decorate --oneline --abbrev-commit --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cr %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%<(70,mtrunc)%s"'
+alias gdg='git log --graph --all --decorate --oneline --abbrev-commit --date=short-local --pretty=format:"%>|(13)%Cred%h%Creset %Creset%Cgreen%>|(26)%cd %C(bold blue)%<(18,trunc)%an%Creset %C(magenta)%d %Creset%<(70,mtrunc)%s"'
 # Alias list
 alias sublime="open -a /Applications/Sublime\ Text.app"
 # alias' for git commands
 alias gr='gr'
-alias ga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%Cred%h%C(reset) %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(magenta)%d%C(reset)' --all"
+alias gum="git checkout master;git pull;git checkout -"
 alias gs='git log --all --graph --oneline --decorate'
-alias gb='git branch -a -vv'
+alias gb='git --no-pager branch -a -vv'
+alias gbb='git --no-pager branch'
+alias gba='git --no-pager branch -a'
 alias gf='git fetch --prune;gb'
 alias grfa='gr git fetch --prune;gr status'
 alias grst='gr status'
 alias grast='gr @active status'
 alias grafa='gr @active git fetch --prune;grast'
 alias grabv='gr @active git fetch --prune;gr @active git branch -a -vv'
-alias gfgg='gf;gg'
+alias gfgg='git fetch --prune;gg'
 # alias' for docker-compose commands
 alias dcdu='docker-compose down;docker-compose up'
 alias dcdud='docker-compose down;docker-compose up -d'
 alias dcdudg='docker-compose down;docker-compose up -d;npm run dev'
-alias z='sublime ~/.zshrc'
-alias sky='cd ~/Sites/skytrax-ratings/'
 
 # User configuration
 
@@ -132,3 +137,5 @@ export EDITOR="$VISUAL"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
