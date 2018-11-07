@@ -89,6 +89,7 @@ alias sublime="open -a /Applications/Sublime\ Text.app"
 # alias' for git commands
 alias gr='gr'
 alias ggg="git log --graph --abbrev-commit --decorate --format=format:'%Cred%h%C(reset) %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(magenta)%d%C(reset)' --all"
+alias gdb="git log --date=relative --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%Creset' --abbrev-commit"
 alias gum="git checkout master;git pull;git checkout -"
 alias gs='git log --all --graph --oneline --decorate'
 alias gb='git --no-pager branch -a -vv'
