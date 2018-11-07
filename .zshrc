@@ -106,6 +106,7 @@ alias gfgg='git fetch --prune;gg'
 alias dcdu='docker-compose down;docker-compose up'
 alias dcdud='docker-compose down;docker-compose up -d'
 alias dcdudg='docker-compose down;docker-compose up -d;npm run dev'
+alias s='cd ~/Sites'
 
 # User configuration
 
